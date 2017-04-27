@@ -13,6 +13,8 @@ install:
   - git clone https://chromium.googlesource.com/chromium/src/tools/clang
   - cd ..
   - TMP_CLANG/clang/scripts/update.py
+  - ln -s ./third_party/llvm-build/Release+Asserts/bin/clang
+  - ln -s ./third_party/llvm-build/Release+Asserts/bin/clang++
 
 script:
   - qmake
