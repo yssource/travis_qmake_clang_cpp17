@@ -17,8 +17,8 @@ install:
   #- ln -s ./third_party/llvm-build/Release+Asserts/bin/clang++
   #- sudo update-alternatives --install /usr/bin/clang++ clang++ ./third_party/llvm-build/Release+Asserts/bin/clang++ 90
   #- sudo update-alternatives --install /usr/bin/clang clang ./third_party/llvm-build/Release+Asserts/bin/clang 90
-  - sudo ln -s --force ./third_party/llvm-build/Release+Asserts/bin/clang /usr/bin/clang
-  - sudo ln -s --force ./third_party/llvm-build/Release+Asserts/bin/clang++ /usr/bin/clang++
+  #- sudo ln -s --force ./third_party/llvm-build/Release+Asserts/bin/clang /usr/bin/clang
+  #- sudo ln -s --force ./third_party/llvm-build/Release+Asserts/bin/clang++ /usr/bin/clang++
   # STL
   - sudo apt-get install -y libc++-dev libc++abi-dev
 
