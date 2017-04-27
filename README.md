@@ -9,7 +9,7 @@ This GitHub is part of [the Travis C++ Tutorial](https://github.com/richelbilder
 
 The goal of this project is to have a clean Travis CI build, with specs:
  * Build system: `qmake`
- * C++ compiler: `clang`, trunk version
+ * C++ compiler: `clang`, trunk version. For using the most recent `clang` package (which allows `c++1z`, see [travis_qmake_clang_cpp14](https://www.github.com/richelbilderbeek/travis_qmake_clang_cpp14)
  * C++ version: `C++17`
  * Libraries: `STL` only
  * Code coverage: none
