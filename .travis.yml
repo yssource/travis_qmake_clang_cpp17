@@ -13,10 +13,12 @@ install:
   - git clone https://chromium.googlesource.com/chromium/src/tools/clang
   - cd ..
   - TMP_CLANG/clang/scripts/update.py
+  - ln -s --force ./third_party/llvm-build/Release+Asserts/bin/clang /usr/bin/clang
+  - ln -s --force ./third_party/llvm-build/Release+Asserts/bin/clang++ /usr/bin/clang++
   #- ln -s ./third_party/llvm-build/Release+Asserts/bin/clang
   #- ln -s ./third_party/llvm-build/Release+Asserts/bin/clang++
-  - sudo update-alternatives --install /usr/bin/clang++ clang++ ./third_party/llvm-build/Release+Asserts/bin/clang++ 90
-  - sudo update-alternatives --install /usr/bin/clang clang ./third_party/llvm-build/Release+Asserts/bin/clang 90
+  #- sudo update-alternatives --install /usr/bin/clang++ clang++ ./third_party/llvm-build/Release+Asserts/bin/clang++ 90
+  #- sudo update-alternatives --install /usr/bin/clang clang ./third_party/llvm-build/Release+Asserts/bin/clang 90
   # STL
   - sudo apt-get install -y libc++-dev libc++abi-dev
 
