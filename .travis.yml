@@ -6,7 +6,6 @@ install:
   # clang, version 3.8
   #- sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-3.8 90
   #- sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-3.8 90
-  #- sudo apt-get install -y libc++-dev libc++abi-dev
   # clang, trunk, from http://llvm.org/docs/LibFuzzer.html#id14
   - mkdir TMP_CLANG
   - cd TMP_CLANG
@@ -15,6 +14,8 @@ install:
   - TMP_CLANG/clang/scripts/update.py
   - ln -s ./third_party/llvm-build/Release+Asserts/bin/clang
   - ln -s ./third_party/llvm-build/Release+Asserts/bin/clang++
+  # STL
+  - sudo apt-get install -y libc++-dev libc++abi-dev
 
 script:
   - qmake
