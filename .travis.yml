@@ -4,21 +4,15 @@ sudo: required
 
 install: 
   - clang++ -v
-  # clang, version 3.8
-  #- sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-3.8 90
-  #- sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-3.8 90
   # clang, trunk, from http://llvm.org/docs/LibFuzzer.html#id14
   - mkdir TMP_CLANG
   - cd TMP_CLANG
   - git clone https://chromium.googlesource.com/chromium/src/tools/clang
   - cd ..
   - TMP_CLANG/clang/scripts/update.py
-  #- ln -s ./third_party/llvm-build/Release+Asserts/bin/clang
-  #- ln -s ./third_party/llvm-build/Release+Asserts/bin/clang++
-  #- sudo update-alternatives --install /usr/bin/clang++ clang++ ./third_party/llvm-build/Release+Asserts/bin/clang++ 90
-  #- sudo update-alternatives --install /usr/bin/clang clang ./third_party/llvm-build/Release+Asserts/bin/clang 90
-  #- sudo ln -s --force ./third_party/llvm-build/Release+Asserts/bin/clang /usr/bin/clang
-  #- sudo ln -s --force ./third_party/llvm-build/Release+Asserts/bin/clang++ /usr/bin/clang++
+  # Links to clang, trunk
+  - ln -s ./third_party/llvm-build/Release+Asserts/bin/clang
+  - ln -s ./third_party/llvm-build/Release+Asserts/bin/clang++
   # STL
   - sudo apt-get install -y libc++-dev libc++abi-dev
 
