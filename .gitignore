@@ -29,3 +29,4 @@
 *.app
 TMP_CLANG/
 third_party/
+*.pro.user
