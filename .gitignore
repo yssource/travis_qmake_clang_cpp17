@@ -30,3 +30,6 @@
 TMP_CLANG/
 third_party/
 *.pro.user
+
+qbuild/
+compile_commands.json
